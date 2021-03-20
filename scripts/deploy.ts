@@ -6,7 +6,6 @@ import { ethers } from "hardhat";
 import { FlashWETH__factory, FlashMinter__factory } from "../typechain";
 
 async function main(): Promise<void> {
-
   const FlashWETH = (await ethers.getContractFactory("FlashWETH")) as FlashWETH__factory;
   const flashWeth = await FlashWETH.deploy();
   await flashWeth.deployed();
